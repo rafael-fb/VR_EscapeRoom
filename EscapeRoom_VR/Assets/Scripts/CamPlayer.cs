@@ -14,22 +14,45 @@ public class CamPlayer : MonoBehaviour
 
     private void Update()
     {
-        ray = new Ray(Camera.main.transform.position, Camera.main.transform.rotation * Vector3.forward);
 
+        // TESTE - INPUTS
+        if(Input.GetKey(KeyCode.W))
+        {
+            transform.Rotate(Vector3.left * 75f * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Rotate(Vector3.right * 75f * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(Vector3.up * 75f * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(Vector3.down * 75f * Time.deltaTime);
+        }
+
+
+
+        ray = new Ray(Camera.main.transform.position, Camera.main.transform.rotation * Vector3.forward);
         if(Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
             // Select a magic target
-            if(hit.collider.GetComponent<MagicTarget>() && Input.GetButtonDown("Jump") && !isLevitating)
+            if(hit.collider.GetComponent<MagicTarget>() && Input.GetButtonDown("Fire1") && !isLevitating)
             {
                 selectedMagicTarget = hit.collider.gameObject;
                 selectedMagicTarget.GetComponent<MagicTarget>().StartLevitation(this.transform);
                 isLevitating = true;
             }
+
             // Interact with anything that has tag + interface 'Interactable' by the function 'InteractAction()'
+            
             if(hit.collider.CompareTag("Interactable") && Input.GetButtonDown("Fire1") && !isLevitating)
             {
                 hit.collider.GetComponent<Interactable>().InteractAction();
             }
+            
         }
 
         if(isLevitating)
@@ -44,11 +67,11 @@ public class CamPlayer : MonoBehaviour
             }
             else
             {
-                StopLevitation();
+                //StopLevitation();
             }
 
             // Stop Levitation Magic
-            if(Input.GetButtonUp("Horizontal"))
+            if(Input.GetButtonUp("Fire1"))
             {
                 StopLevitation();
             }

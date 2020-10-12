@@ -14,6 +14,7 @@ public class MagicTarget : MonoBehaviour
         grid = Instantiate(gridPrefab, transform.position, Quaternion.identity);
         grid.transform.LookAt(playerTransform);
         grid.transform.rotation = new Quaternion(0f, grid.transform.rotation.y, 0f, grid.transform.rotation.w);
+        print("start");
     }
 
     public void EndLevitation()
