@@ -1,6 +1,0 @@
-sceneSetups:
-- path: Assets/Acorn Bringer Assets/Simplistic Low Poly Nature/Simplistic Low Poly
-    Nature Demo Scene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0

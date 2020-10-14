@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8119485098042027452}
   - component: {fileID: 143114456502011891}
   - component: {fileID: 6753563762434020887}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Porta
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8119485098109045758}
   - component: {fileID: 8119485098109045757}
   - component: {fileID: 8119485098109045752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MinusBtn (1)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485098337612815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlusBtns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 8119485098423231950}
   - component: {fileID: 8119485098423231949}
   - component: {fileID: 8119485098423231948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485098484047595}
   - component: {fileID: 8119485098484047588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485098494368151}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Number (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485098495242323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MinusBtns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485098612218838}
   - component: {fileID: 8119485098612218839}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485098641607151}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485098738399000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PasswordEntry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485098801356505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 8119485098820361405}
   - component: {fileID: 8119485098820361404}
   - component: {fileID: 8119485098820361407}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MinusBtn (2)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 8119485098874454689}
   - component: {fileID: 8119485098874454688}
   - component: {fileID: 8119485098874454691}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MinusBtn (3)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 8119485098905136410}
   - component: {fileID: 8119485098905136409}
   - component: {fileID: 8119485098905136404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MinusBtn
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -1004,13 +1004,13 @@ GameObject:
   - component: {fileID: 8119485098958772058}
   - component: {fileID: 8119485098958772057}
   - component: {fileID: 8119485098958772052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UI_PasswordPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8119485098958772056
 Transform:
   m_ObjectHideFlags: 0
@@ -1019,8 +1019,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8119485098958772063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.44, y: -0.27960002, z: 0.15999985}
-  m_LocalScale: {x: 3.075, y: 3.0112503, z: 1}
+  m_LocalPosition: {x: -0.03, y: 2.24, z: 0.15144}
+  m_LocalScale: {x: 1.8684931, y: 1.8297561, z: 0.60764}
   m_Children:
   - {fileID: 8119485099431031545}
   - {fileID: 8119485098738399000}
@@ -1118,7 +1118,7 @@ GameObject:
   - component: {fileID: 8119485098978736245}
   - component: {fileID: 8119485098978736244}
   - component: {fileID: 8119485098978736251}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,7 +1212,7 @@ GameObject:
   - component: {fileID: 8119485099010066997}
   - component: {fileID: 8119485099010066999}
   - component: {fileID: 8119485099010066998}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tittle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,7 +1308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485099033376428}
   - component: {fileID: 8119485099033376429}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1393,7 +1393,7 @@ GameObject:
   - component: {fileID: 8119485099169760490}
   - component: {fileID: 8119485099169760489}
   - component: {fileID: 8119485099169760484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlusBtn (1)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -1504,7 +1504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485099280582352}
   - component: {fileID: 8119485099280582353}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,7 +1589,7 @@ GameObject:
   - component: {fileID: 8119485099281292190}
   - component: {fileID: 8119485099281292189}
   - component: {fileID: 8119485099281292184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CloseBtn
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -1699,7 +1699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485099286139788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Number (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1730,7 +1730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485099385160620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Number (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1765,7 +1765,7 @@ GameObject:
   - component: {fileID: 8119485099396638390}
   - component: {fileID: 8119485099396638389}
   - component: {fileID: 8119485099396638384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlusBtn (2)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -1877,7 +1877,7 @@ GameObject:
   - component: {fileID: 8119485099431031545}
   - component: {fileID: 8119485099431031547}
   - component: {fileID: 8119485099431031546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 8119485099459423630}
   - component: {fileID: 8119485099459423629}
   - component: {fileID: 8119485099459423624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlusBtn
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -2072,7 +2072,7 @@ GameObject:
   - component: {fileID: 8119485099469361518}
   - component: {fileID: 8119485099469361512}
   - component: {fileID: 8119485099469361519}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2167,7 +2167,7 @@ GameObject:
   - component: {fileID: 8119485099616965639}
   - component: {fileID: 8119485099616965633}
   - component: {fileID: 8119485099616965632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2261,7 +2261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485099631088547}
   - component: {fileID: 8119485099631088572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,7 +2343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485099677539887}
   - component: {fileID: 8119485099677539880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2425,7 +2425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485099697836896}
   - component: {fileID: 8119485099697836897}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2508,7 +2508,7 @@ GameObject:
   - component: {fileID: 8119485099856591638}
   - component: {fileID: 8119485099856591632}
   - component: {fileID: 8119485099856591639}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 8119485099893645101}
   - component: {fileID: 8119485099893645103}
   - component: {fileID: 8119485099893645102}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,7 +2700,7 @@ GameObject:
   - component: {fileID: 8119485100029422938}
   - component: {fileID: 8119485100029422937}
   - component: {fileID: 8119485100029422932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlusBtn (3)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -2810,7 +2810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8119485100039940335}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Numbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2845,7 +2845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485100091024019}
   - component: {fileID: 8119485100091024044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2927,7 +2927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8119485100120852184}
   - component: {fileID: 8119485100120852185}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

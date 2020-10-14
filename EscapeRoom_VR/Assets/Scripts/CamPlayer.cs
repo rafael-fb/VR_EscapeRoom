@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CamPlayer : MonoBehaviour
 {
@@ -8,18 +9,45 @@ public class CamPlayer : MonoBehaviour
     private Ray ray;
     private RaycastHit hit;
     public LayerMask gridMask;
+    public LayerMask targetMask;
     private GameObject selectedMagicTarget;
     [HideInInspector] public WalkTarget previousWalkTarget;
     private GameObject inspectedObject;
     public GameObject inspectionObject;
+    public GameObject inspectionParent;
     bool isSecondTouch;
 
     enum PlayerState { Normal, Levitating, Inspecting, }
     PlayerState playerState = PlayerState.Normal;
 
 
+    private void Start()
+    {
+        roomIndex++;
+        if (roomIndex <= lastRoomIndex)
+        {
+            timer += 60f;
+            roomClue = roomClues[roomIndex - 1];
+            UpdateHUD();
+        }
+    }
+
     private void Update()
     {
+
+        if(isTimerOn)
+        {
+            if(timer > 0)
+            {
+                timer -= Time.deltaTime;
+                ui_timer.text = (Mathf.Round(timer)).ToString();
+            }
+            else
+            {
+                BadEnd();
+            }
+        }
+
 
         // TESTE - INPUTS
         if(Input.GetKey(KeyCode.W))
@@ -41,7 +69,7 @@ public class CamPlayer : MonoBehaviour
 
 
         ray = new Ray(Camera.main.transform.position, Camera.main.transform.rotation * Vector3.forward);
-        if(Physics.Raycast(ray, out hit, Mathf.Infinity) && playerState == PlayerState.Normal)
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity, targetMask) && playerState == PlayerState.Normal)
         {
             // Select a magic target
             if(hit.collider.GetComponent<MagicTarget>() && Input.GetButtonDown("Fire1"))
@@ -89,8 +117,8 @@ public class CamPlayer : MonoBehaviour
 
 
         if(playerState == PlayerState.Inspecting)
-        {
-            if(Input.GetButtonDown("Fire1"))
+        {            
+            if (Input.GetButtonDown("Fire1"))
             {
                 if(!isSecondTouch)
                 {
@@ -107,7 +135,7 @@ public class CamPlayer : MonoBehaviour
     IEnumerator SecondTouchTimer()
     {
         isSecondTouch = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         isSecondTouch = false;
     }
 
@@ -119,7 +147,6 @@ public class CamPlayer : MonoBehaviour
         selectedMagicTarget = null;
     }
 
-
     void InspectObject(GameObject mesh)
     {
         playerState = PlayerState.Inspecting;
@@ -128,12 +155,62 @@ public class CamPlayer : MonoBehaviour
         inspectionObject.GetComponent<MeshFilter>().mesh = inspectedObject.GetComponent<MeshFilter>().mesh;
         inspectionObject.GetComponent<MeshRenderer>().material = inspectedObject.GetComponent<MeshRenderer>().material;
         inspectedObject.SetActive(false);
-        inspectionObject.SetActive(true);
+        inspectionParent.transform.SetParent(null);
+        inspectionParent.SetActive(true);
     }
     void StopInspection()
     {
         playerState = PlayerState.Normal;
         inspectedObject.SetActive(true);
-        inspectionObject.SetActive(false);
+        inspectionParent.transform.SetParent(this.transform);
+        inspectionParent.SetActive(false);
+    }
+
+
+
+
+    public int lastRoomIndex;
+    public string[] roomClues; 
+    int roomIndex;
+    float timer;
+    string roomClue;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Finish"))
+        {
+            isTimerOn = false;
+            roomIndex++;
+            if(roomIndex <= lastRoomIndex)
+            {
+                timer += 60f;
+                roomClue = roomClues[roomIndex-1];
+                UpdateHUD();
+            }
+            else
+            {
+                GoodEnd();
+            }
+        }
+    }
+
+    public Text ui_progress;
+    public Text ui_timer;
+    public Text ui_clue;
+    bool isTimerOn;
+    void UpdateHUD()
+    {
+        ui_progress.text = roomIndex.ToString() + " / " + lastRoomIndex.ToString();
+        ui_clue.text = roomClue;
+        isTimerOn = true;
+    }
+
+    void GoodEnd()
+    {
+        //Fim de jogo -- finalizou todas as salas
+    }
+    void BadEnd()
+    {
+        // game over -- time's up
     }
 }
