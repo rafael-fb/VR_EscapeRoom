@@ -26,10 +26,16 @@ public class WalkTarget : MonoBehaviour, Interactable
         if(shouldPlayerMove)
         {
             player.transform.position = Vector3.MoveTowards(player.transform.position, this.transform.position, 10f * Time.deltaTime);
-            if(Mathf.Round(Vector3.Distance(player.transform.position, this.transform.position)) <= 0)
+            if(Mathf.Round(Vector3.Distance(player.transform.position, this.transform.position)) <= 1f)
             {
                 shouldPlayerMove = false;
+                GetComponent<MeshRenderer>().enabled = false;
             }
+            else
+            {
+                GetComponent<MeshRenderer>().enabled = true;
+            }
+
         }
     }
 }

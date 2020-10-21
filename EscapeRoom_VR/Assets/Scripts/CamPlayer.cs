@@ -52,19 +52,19 @@ public class CamPlayer : MonoBehaviour
         // TESTE - INPUTS
         if(Input.GetKey(KeyCode.W))
         {
-            transform.Rotate(Vector3.left * 75f * Time.deltaTime);
+            transform.rotation = new Quaternion(transform.rotation.x + 0.5f * Time.deltaTime, transform.rotation.y, transform.rotation.z * 0.0f, transform.rotation.w);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Rotate(Vector3.right * 75f * Time.deltaTime);
+           transform.rotation = new Quaternion(transform.rotation.x - 0.5f * Time.deltaTime, transform.rotation.y, transform.rotation.z * 0.0f, transform.rotation.w);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.up * 75f * Time.deltaTime);
+            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y + 0.5f * Time.deltaTime, transform.rotation.z * 0.0f, transform.rotation.w);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.down * 75f * Time.deltaTime);
+            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y - 0.5f * Time.deltaTime, transform.rotation.z*0.0f, transform.rotation.w);
         }
 
 
