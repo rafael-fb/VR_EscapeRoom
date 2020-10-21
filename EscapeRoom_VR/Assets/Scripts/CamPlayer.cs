@@ -50,6 +50,7 @@ public class CamPlayer : MonoBehaviour
 
 
         // TESTE - INPUTS
+        /*
         if(Input.GetKey(KeyCode.W))
         {
             transform.rotation = new Quaternion(transform.rotation.x + 0.5f * Time.deltaTime, transform.rotation.y, transform.rotation.z * 0.0f, transform.rotation.w);
@@ -65,7 +66,9 @@ public class CamPlayer : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y - 0.5f * Time.deltaTime, transform.rotation.z*0.0f, transform.rotation.w);
-        }
+        }*/
+
+
 
 
         ray = new Ray(Camera.main.transform.position, Camera.main.transform.rotation * Vector3.forward);
@@ -183,7 +186,7 @@ public class CamPlayer : MonoBehaviour
             roomIndex++;
             if(roomIndex <= lastRoomIndex)
             {
-                timer += 60f;
+                timer += 30f;
                 roomClue = roomClues[roomIndex-1];
                 UpdateHUD();
             }
